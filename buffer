@@ -1,0 +1,484 @@
+.
+├── blackjack
+│   ├── main.c
+│   ├── Makefile
+│   ├── my.h
+│   ├── my_list.h
+│   ├── old_func
+│   │   ├── is_even.c
+│   │   ├── my_getnbr.c
+│   │   ├── my_putchar.c
+│   │   ├── my_putnbr.c
+│   │   ├── my_putstr.c
+│   │   ├── my_strcat.c
+│   │   ├── my_strcmp.c
+│   │   ├── my_strcpy.c
+│   │   ├── my_strdup.c
+│   │   ├── my_strlen.c
+│   │   ├── put_zero.c
+│   │   └── xfunc.c
+│   └── sources
+│       ├── ask.c
+│       ├── blackjack.c
+│       ├── calc_card.c
+│       ├── core.c
+│       ├── dealer.c
+│       ├── init.c
+│       ├── mk_cards.c
+│       ├── moar_card.c
+│       ├── print2.c
+│       ├── print.c
+│       ├── random.c
+│       ├── read_entry.c
+│       ├── result.c
+│       ├── special.c
+│       ├── split.c
+│       └── state.c
+├── bomberman
+│   ├── assets
+│   │   ├── bomb.fbm
+│   │   │   └── Bomb_texture.tga
+│   │   ├── bomb.fbx
+│   │   ├── bomb.tga
+│   │   ├── bonus_bomb.tga
+│   │   ├── bonus_force.tga
+│   │   ├── bonus_speed.tga
+│   │   ├── box.tga
+│   │   ├── fire.tga
+│   │   ├── floor.tga
+│   │   ├── marvin.fbm
+│   │   │   ├── Main_texture_diffuse2.tga
+│   │   │   └── marvin.tga
+│   │   ├── marvin.fbx
+│   │   └── wall.tga
+│   ├── inc_bomber
+│   │   ├── AObject.hh
+│   │   ├── Block.hh
+│   │   ├── Bomb.hh
+│   │   ├── Bonus.hh
+│   │   ├── Case.hh
+│   │   ├── Cube.hh
+│   │   ├── enum.hh
+│   │   ├── Floor.hh
+│   │   ├── GameMain.hh
+│   │   ├── Graphic.hh
+│   │   ├── #Map.hh#
+│   │   ├── Map.hh
+│   │   ├── Mod.hh
+│   │   ├── PInput.hh
+│   │   ├── Player.hh
+│   │   └── Wall.hh
+│   ├── includes
+│   │   ├── AShader.hh
+│   │   ├── Attribute.hh
+│   │   ├── BasicShader.hh
+│   │   ├── begin_code.h
+│   │   ├── Clock.hh
+│   │   ├── close_code.h
+│   │   ├── doxyfile
+│   │   ├── Game.hh
+│   │   ├── Geometry.hh
+│   │   ├── GL
+│   │   │   ├── glew.h
+│   │   │   ├── glxew.h
+│   │   │   └── wglew.h
+│   │   ├── glm
+│   │   │   ├── CMakeFiles
+│   │   │   │   ├── CMakeCCompiler.cmake
+│   │   │   │   ├── cmake.check_cache
+│   │   │   │   ├── CMakeCXXCompiler.cmake
+│   │   │   │   ├── CMakeDetermineCompilerABI_C.bin
+│   │   │   │   ├── CMakeDetermineCompilerABI_CXX.bin
+│   │   │   │   ├── CMakeDirectoryInformation.cmake
+│   │   │   │   ├── CMakeSystem.cmake
+│   │   │   │   ├── CompilerIdC
+│   │   │   │   │   ├── a.out
+│   │   │   │   │   └── CMakeCCompilerId.c
+│   │   │   │   ├── CompilerIdCXX
+│   │   │   │   │   ├── a.out
+│   │   │   │   │   └── CMakeCXXCompilerId.cpp
+│   │   │   │   ├── glm.dir
+│   │   │   │   │   ├── build.make
+│   │   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   │   ├── DependInfo.cmake
+│   │   │   │   │   ├── depend.make
+│   │   │   │   │   ├── flags.make
+│   │   │   │   │   ├── link.txt
+│   │   │   │   │   └── progress.make
+│   │   │   │   ├── Makefile2
+│   │   │   │   ├── Makefile.cmake
+│   │   │   │   ├── progress.marks
+│   │   │   │   └── TargetDirectories.txt
+│   │   │   ├── core
+│   │   │   │   ├── _detail.hpp
+│   │   │   │   ├── dummy.cpp
+│   │   │   │   ├── _fixes.hpp
+│   │   │   │   ├── func_common.hpp
+│   │   │   │   ├── func_common.inl
+│   │   │   │   ├── func_exponential.hpp
+│   │   │   │   ├── func_exponential.inl
+│   │   │   │   ├── func_geometric.hpp
+│   │   │   │   ├── func_geometric.inl
+│   │   │   │   ├── func_integer.hpp
+│   │   │   │   ├── func_integer.inl
+│   │   │   │   ├── func_matrix.hpp
+│   │   │   │   ├── func_matrix.inl
+│   │   │   │   ├── func_noise.hpp
+│   │   │   │   ├── func_noise.inl
+│   │   │   │   ├── func_packing.hpp
+│   │   │   │   ├── func_packing.inl
+│   │   │   │   ├── func_trigonometric.hpp
+│   │   │   │   ├── func_trigonometric.inl
+│   │   │   │   ├── func_vector_relational.hpp
+│   │   │   │   ├── func_vector_relational.inl
+│   │   │   │   ├── hint.hpp
+│   │   │   │   ├── intrinsic_common.hpp
+│   │   │   │   ├── intrinsic_common.inl
+│   │   │   │   ├── intrinsic_exponential.hpp
+│   │   │   │   ├── intrinsic_exponential.inl
+│   │   │   │   ├── intrinsic_geometric.hpp
+│   │   │   │   ├── intrinsic_geometric.inl
+│   │   │   │   ├── intrinsic_matrix.hpp
+│   │   │   │   ├── intrinsic_matrix.inl
+│   │   │   │   ├── intrinsic_trigonometric.hpp
+│   │   │   │   ├── intrinsic_trigonometric.inl
+│   │   │   │   ├── intrinsic_vector_relational.hpp
+│   │   │   │   ├── intrinsic_vector_relational.inl
+│   │   │   │   ├── setup.hpp
+│   │   │   │   ├── _swizzle_func.hpp
+│   │   │   │   ├── _swizzle.hpp
+│   │   │   │   ├── type_float.hpp
+│   │   │   │   ├── type_gentype.hpp
+│   │   │   │   ├── type_gentype.inl
+│   │   │   │   ├── type_half.hpp
+│   │   │   │   ├── type_half.inl
+│   │   │   │   ├── type.hpp
+│   │   │   │   ├── type_int.hpp
+│   │   │   │   ├── type_mat2x2.hpp
+│   │   │   │   ├── type_mat2x2.inl
+│   │   │   │   ├── type_mat2x3.hpp
+│   │   │   │   ├── type_mat2x3.inl
+│   │   │   │   ├── type_mat2x4.hpp
+│   │   │   │   ├── type_mat2x4.inl
+│   │   │   │   ├── type_mat3x2.hpp
+│   │   │   │   ├── type_mat3x2.inl
+│   │   │   │   ├── type_mat3x3.hpp
+│   │   │   │   ├── type_mat3x3.inl
+│   │   │   │   ├── type_mat3x4.hpp
+│   │   │   │   ├── type_mat3x4.inl
+│   │   │   │   ├── type_mat4x2.hpp
+│   │   │   │   ├── type_mat4x2.inl
+│   │   │   │   ├── type_mat4x3.hpp
+│   │   │   │   ├── type_mat4x3.inl
+│   │   │   │   ├── type_mat4x4.hpp
+│   │   │   │   ├── type_mat4x4.inl
+│   │   │   │   ├── type_mat.hpp
+│   │   │   │   ├── type_mat.inl
+│   │   │   │   ├── type_size.hpp
+│   │   │   │   ├── type_vec1.hpp
+│   │   │   │   ├── type_vec1.inl
+│   │   │   │   ├── type_vec2.hpp
+│   │   │   │   ├── type_vec2.inl
+│   │   │   │   ├── type_vec3.hpp
+│   │   │   │   ├── type_vec3.inl
+│   │   │   │   ├── type_vec4.hpp
+│   │   │   │   ├── type_vec4.inl
+│   │   │   │   ├── type_vec.hpp
+│   │   │   │   ├── type_vec.inl
+│   │   │   │   └── _vectorize.hpp
+│   │   │   ├── ext.hpp
+│   │   │   ├── glm.hpp
+│   │   │   ├── gtc
+│   │   │   │   ├── constants.hpp
+│   │   │   │   ├── constants.inl
+│   │   │   │   ├── epsilon.hpp
+│   │   │   │   ├── epsilon.inl
+│   │   │   │   ├── half_float.hpp
+│   │   │   │   ├── half_float.inl
+│   │   │   │   ├── matrix_access.hpp
+│   │   │   │   ├── matrix_access.inl
+│   │   │   │   ├── matrix_integer.hpp
+│   │   │   │   ├── matrix_inverse.hpp
+│   │   │   │   ├── matrix_inverse.inl
+│   │   │   │   ├── matrix_transform.hpp
+│   │   │   │   ├── matrix_transform.inl
+│   │   │   │   ├── noise.hpp
+│   │   │   │   ├── noise.inl
+│   │   │   │   ├── quaternion.hpp
+│   │   │   │   ├── quaternion.inl
+│   │   │   │   ├── random.hpp
+│   │   │   │   ├── random.inl
+│   │   │   │   ├── reciprocal.hpp
+│   │   │   │   ├── reciprocal.inl
+│   │   │   │   ├── swizzle.hpp
+│   │   │   │   ├── swizzle.inl
+│   │   │   │   ├── type_precision.hpp
+│   │   │   │   ├── type_precision.inl
+│   │   │   │   ├── type_ptr.hpp
+│   │   │   │   ├── type_ptr.inl
+│   │   │   │   ├── ulp.hpp
+│   │   │   │   └── ulp.inl
+│   │   │   ├── gtx
+│   │   │   │   ├── associated_min_max.hpp
+│   │   │   │   ├── associated_min_max.inl
+│   │   │   │   ├── bit.hpp
+│   │   │   │   ├── bit.inl
+│   │   │   │   ├── closest_point.hpp
+│   │   │   │   ├── closest_point.inl
+│   │   │   │   ├── color_cast.hpp
+│   │   │   │   ├── color_cast.inl
+│   │   │   │   ├── color_space.hpp
+│   │   │   │   ├── color_space.inl
+│   │   │   │   ├── color_space_YCoCg.hpp
+│   │   │   │   ├── color_space_YCoCg.inl
+│   │   │   │   ├── compatibility.hpp
+│   │   │   │   ├── compatibility.inl
+│   │   │   │   ├── component_wise.hpp
+│   │   │   │   ├── component_wise.inl
+│   │   │   │   ├── constants.hpp
+│   │   │   │   ├── epsilon.hpp
+│   │   │   │   ├── euler_angles.hpp
+│   │   │   │   ├── euler_angles.inl
+│   │   │   │   ├── extend.hpp
+│   │   │   │   ├── extend.inl
+│   │   │   │   ├── extented_min_max.hpp
+│   │   │   │   ├── extented_min_max.inl
+│   │   │   │   ├── fast_exponential.hpp
+│   │   │   │   ├── fast_exponential.inl
+│   │   │   │   ├── fast_square_root.hpp
+│   │   │   │   ├── fast_square_root.inl
+│   │   │   │   ├── fast_trigonometry.hpp
+│   │   │   │   ├── fast_trigonometry.inl
+│   │   │   │   ├── gradient_paint.hpp
+│   │   │   │   ├── gradient_paint.inl
+│   │   │   │   ├── handed_coordinate_space.hpp
+│   │   │   │   ├── handed_coordinate_space.inl
+│   │   │   │   ├── inertia.hpp
+│   │   │   │   ├── inertia.inl
+│   │   │   │   ├── int_10_10_10_2.hpp
+│   │   │   │   ├── int_10_10_10_2.inl
+│   │   │   │   ├── integer.hpp
+│   │   │   │   ├── integer.inl
+│   │   │   │   ├── intersect.hpp
+│   │   │   │   ├── intersect.inl
+│   │   │   │   ├── log_base.hpp
+│   │   │   │   ├── log_base.inl
+│   │   │   │   ├── matrix_cross_product.hpp
+│   │   │   │   ├── matrix_cross_product.inl
+│   │   │   │   ├── matrix_interpolation.hpp
+│   │   │   │   ├── matrix_interpolation.inl
+│   │   │   │   ├── matrix_major_storage.hpp
+│   │   │   │   ├── matrix_major_storage.inl
+│   │   │   │   ├── matrix_operation.hpp
+│   │   │   │   ├── matrix_operation.inl
+│   │   │   │   ├── matrix_query.hpp
+│   │   │   │   ├── matrix_query.inl
+│   │   │   │   ├── mixed_product.hpp
+│   │   │   │   ├── mixed_product.inl
+│   │   │   │   ├── multiple.hpp
+│   │   │   │   ├── multiple.inl
+│   │   │   │   ├── noise.hpp
+│   │   │   │   ├── normal.hpp
+│   │   │   │   ├── normal.inl
+│   │   │   │   ├── normalize_dot.hpp
+│   │   │   │   ├── normalize_dot.inl
+│   │   │   │   ├── norm.hpp
+│   │   │   │   ├── norm.inl
+│   │   │   │   ├── number_precision.hpp
+│   │   │   │   ├── number_precision.inl
+│   │   │   │   ├── ocl_type.hpp
+│   │   │   │   ├── ocl_type.inl
+│   │   │   │   ├── optimum_pow.hpp
+│   │   │   │   ├── optimum_pow.inl
+│   │   │   │   ├── orthonormalize.hpp
+│   │   │   │   ├── orthonormalize.inl
+│   │   │   │   ├── perpendicular.hpp
+│   │   │   │   ├── perpendicular.inl
+│   │   │   │   ├── polar_coordinates.hpp
+│   │   │   │   ├── polar_coordinates.inl
+│   │   │   │   ├── projection.hpp
+│   │   │   │   ├── projection.inl
+│   │   │   │   ├── quaternion.hpp
+│   │   │   │   ├── quaternion.inl
+│   │   │   │   ├── random.hpp
+│   │   │   │   ├── raw_data.hpp
+│   │   │   │   ├── raw_data.inl
+│   │   │   │   ├── reciprocal.hpp
+│   │   │   │   ├── rotate_vector.hpp
+│   │   │   │   ├── rotate_vector.inl
+│   │   │   │   ├── simd_mat4.hpp
+│   │   │   │   ├── simd_mat4.inl
+│   │   │   │   ├── simd_vec4.hpp
+│   │   │   │   ├── simd_vec4.inl
+│   │   │   │   ├── spline.hpp
+│   │   │   │   ├── spline.inl
+│   │   │   │   ├── std_based_type.hpp
+│   │   │   │   ├── std_based_type.inl
+│   │   │   │   ├── string_cast.hpp
+│   │   │   │   ├── string_cast.inl
+│   │   │   │   ├── transform2.hpp
+│   │   │   │   ├── transform2.inl
+│   │   │   │   ├── transform.hpp
+│   │   │   │   ├── transform.inl
+│   │   │   │   ├── ulp.hpp
+│   │   │   │   ├── unsigned_int.hpp
+│   │   │   │   ├── unsigned_int.inl
+│   │   │   │   ├── vec1.hpp
+│   │   │   │   ├── vec1.inl
+│   │   │   │   ├── vector_access.hpp
+│   │   │   │   ├── vector_access.inl
+│   │   │   │   ├── vector_angle.hpp
+│   │   │   │   ├── vector_angle.inl
+│   │   │   │   ├── vector_query.hpp
+│   │   │   │   ├── vector_query.inl
+│   │   │   │   ├── verbose_operator.hpp
+│   │   │   │   ├── verbose_operator.inl
+│   │   │   │   ├── wrap.hpp
+│   │   │   │   └── wrap.inl
+│   │   │   └── virtrev
+│   │   │       └── xstream.hpp
+│   │   ├── Input.hh
+│   │   ├── IRenderContext.hh
+│   │   ├── Model.hh
+│   │   ├── OpenGL.hh
+│   │   ├── SDL_assert.h
+│   │   ├── SDL_atomic.h
+│   │   ├── SDL_audio.h
+│   │   ├── SDL_bits.h
+│   │   ├── SDL_blendmode.h
+│   │   ├── SDL_clipboard.h
+│   │   ├── SDL_config_android.h
+│   │   ├── SDL_config.h
+│   │   ├── SDL_config.h.cmake
+│   │   ├── SDL_config.h.in
+│   │   ├── SDL_config_iphoneos.h
+│   │   ├── SDL_config_macosx.h
+│   │   ├── SDL_config_minimal.h
+│   │   ├── SDL_config_pandora.h
+│   │   ├── SDL_config_psp.h
+│   │   ├── SDL_config_windows.h
+│   │   ├── SDL_config_winrt.h
+│   │   ├── SDL_config_wiz.h
+│   │   ├── SdlContext.hh
+│   │   ├── SDL_copying.h
+│   │   ├── SDL_cpuinfo.h
+│   │   ├── SDL_egl.h
+│   │   ├── SDL_endian.h
+│   │   ├── SDL_error.h
+│   │   ├── SDL_events.h
+│   │   ├── SDL_filesystem.h
+│   │   ├── SDL_gamecontroller.h
+│   │   ├── SDL_gesture.h
+│   │   ├── SDL.h
+│   │   ├── SDL_haptic.h
+│   │   ├── SDL_hints.h
+│   │   ├── SDL_joystick.h
+│   │   ├── SDL_keyboard.h
+│   │   ├── SDL_keycode.h
+│   │   ├── SDL_loadso.h
+│   │   ├── SDL_log.h
+│   │   ├── SDL_main.h
+│   │   ├── SDL_messagebox.h
+│   │   ├── SDL_mouse.h
+│   │   ├── SDL_mutex.h
+│   │   ├── SDL_name.h
+│   │   ├── SDL_opengles2.h
+│   │   ├── SDL_opengles.h
+│   │   ├── SDL_opengl.h
+│   │   ├── SDL_pixels.h
+│   │   ├── SDL_platform.h
+│   │   ├── SDL_power.h
+│   │   ├── SDL_quit.h
+│   │   ├── SDL_rect.h
+│   │   ├── SDL_render.h
+│   │   ├── SDL_revision.h
+│   │   ├── SDL_rwops.h
+│   │   ├── SDL_scancode.h
+│   │   ├── SDL_shape.h
+│   │   ├── SDL_stdinc.h
+│   │   ├── SDL_surface.h
+│   │   ├── SDL_system.h
+│   │   ├── SDL_syswm.h
+│   │   ├── SDL_test_assert.h
+│   │   ├── SDL_test_common.h
+│   │   ├── SDL_test_compare.h
+│   │   ├── SDL_test_crc32.h
+│   │   ├── SDL_test_font.h
+│   │   ├── SDL_test_fuzzer.h
+│   │   ├── SDL_test.h
+│   │   ├── SDL_test_harness.h
+│   │   ├── SDL_test_images.h
+│   │   ├── SDL_test_log.h
+│   │   ├── SDL_test_md5.h
+│   │   ├── SDL_test_random.h
+│   │   ├── SDL_thread.h
+│   │   ├── SDL_timer.h
+│   │   ├── SDL_touch.h
+│   │   ├── SDL_types.h
+│   │   ├── SDL_version.h
+│   │   ├── SDL_video.h
+│   │   └── Texture.hh
+│   ├── libs
+│   │   ├── libfbxsdk.a
+│   │   ├── libfbxsdk.so
+│   │   ├── libgdl_gl.a
+│   │   ├── libGLEW.a
+│   │   ├── libSDL2-2.0.so.0
+│   │   ├── libSDL2-2.0.so.0.2.1
+│   │   ├── libSDL2.a
+│   │   └── libSDL2main.a
+│   ├── Makefile
+│   ├── map
+│   │   ├── GDLmap
+│   │   └── map1
+│   ├── shaders
+│   │   ├── basic.fp
+│   │   └── basic.vp
+│   └── src_bomber
+│       ├── AObject.cpp
+│       ├── Block.cpp
+│       ├── Bomb.cpp
+│       ├── Bonus.cpp
+│       ├── Case.cpp
+│       ├── Cube.cpp
+│       ├── Floor.cpp
+│       ├── GameMain.cpp
+│       ├── #Graphic.cpp#
+│       ├── Graphic.cpp
+│       ├── main.cpp
+│       ├── Map.cpp
+│       ├── Mod.cpp
+│       ├── PInput.cpp
+│       ├── Player.cpp
+│       └── Wall.cpp
+├── buffer
+└── minishell
+    ├── builtin_func
+    │   ├── my_cd
+    │   ├── my_cd.c
+    │   └── my_echo.c
+    ├── env_func
+    │   ├── exec_env_func.c
+    │   ├── make_env.c
+    │   ├── my_setenv.c
+    │   ├── my_unsetenv.c
+    │   └── trans_list_to_dbtab.c
+    ├── main.c
+    ├── Makefile
+    ├── my.h
+    ├── my_list.h
+    ├── no_delete.c
+    ├── old_func
+    │   ├── list_func.c
+    │   ├── my_putstr.c
+    │   ├── str_to_wordtab.c
+    │   └── xfunc.c
+    └── sources
+        ├── exec_bin.c
+        ├── my_exit.c
+        ├── print_not_found.c
+        ├── read_entry.c
+        ├── run_shell.c
+        └── test_empty_cmds.c
+
+28 directories, 453 files
